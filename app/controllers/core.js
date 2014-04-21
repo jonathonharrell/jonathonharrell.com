@@ -1,10 +1,9 @@
 'use strict';
 
-/**
- * Module dependencies.
- */
-exports.index = function(req, res) {
-	res.render('index.html', {
-		user: req.user || null
-	});
+exports.index = function(req, res, next) { // Read recent blog posts for front page
+
+    res.render('index.html', {
+        user: req.user || null
+    });
+
 };

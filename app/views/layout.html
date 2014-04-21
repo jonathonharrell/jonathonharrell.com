@@ -82,7 +82,7 @@
 	<!--Application Modules-->
 	{% for modulesJSFile in modulesJSFiles %}
 		<script type="text/javascript" src="{{modulesJSFile}}"></script>
-	{% endfor %} 
+	{% endfor %}
 
 	{% if process.env.NODE_ENV === 'development' %}
 		<!--Livereload script rendered -->
