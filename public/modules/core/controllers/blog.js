@@ -5,9 +5,9 @@ angular.module('core').controller('BlogController', ['$scope', '$http', 'Authent
         $scope.authentication = Authentication;
         $scope.isCollapsed = false;
 
-        /* $http.get('blogposts').success(function (data) {
-            $scope.blogs = data;
+        $http.get('blogposts').success(function (data) {
+            $scope.blogs = data.items; // individual posts from RSS feed
+            $scope.url = data.url; // URL of blog
         });
-        console.log($scope.blogs); */
     }
 ]);

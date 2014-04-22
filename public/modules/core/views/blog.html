@@ -1,3 +1,15 @@
 <section data-ng-controller="BlogController">
     <!-- Show Blog Posts, Link to Blog --> 
+    <div class="col-md-4">
+        <h2>Recent Blog Posts</h2>
+        <hr />
+        <div class="blog-post" ng-repeat="post in blogs">
+            <h3><a href="{{post.url}}">{{post.title}}</a></h3>
+            <p>{{post.summary | htmlToPlainText | limitTo: 150 }}...</p>
+        </div>
+        <hr />
+        <div class="blog-link">
+            <p>Read more on <a href="{{url}}">my blog</a>.</p>
+        </div>
+    </div>
 </section>
