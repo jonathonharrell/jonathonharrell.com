@@ -8,7 +8,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
             //This is the Main Highcharts chart config. Any Highchart options are valid here.
             //will be ovverriden by values specified below.
             chart: {
-                type: 'bar'
+                type: 'column'
             },
             tooltip: {
                 style: {
@@ -20,12 +20,34 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
 
         //Series object (optional) - a list of series using normal highcharts series options.
         series: [{
-            data: [10, 15, 12, 8, 7]
+            data: [{
+                name: 'PHP',
+                color: '#8892BF',
+                y: 10
+            }, {
+                name: 'Javascript',
+                color: '#b30406',
+                y: 9
+            }, {
+                name: 'Node.js',
+                color: '#80bd01',
+                y: 8
+            }, {
+                name: 'Ruby on Rails',
+                color: '#981A21',
+                y: 5
+            }, {
+                name: 'Symfony 2',
+                color: '#059',
+                y: 8
+            }],
+
+            showInLegend: false
         }],
 
         //Title configuration (optional)
         title: {
-            text: 'Look at this chart'
+            text: 'Awesome Web Dev Chops'
         },
 
         //Boolean to control showng loading status on chart (optional)
@@ -35,14 +57,15 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
         //properties currentMin and currentMax provied 2-way binding to the chart's maximimum and minimum
         xAxis: {
             currentMin: 0,
-            currentMax: 20,
-            title: {text: 'values'}
+            currentMax: 6,
+            type: 'category'
         },
 
-        //size (optional) if left out the chart will default to size of the div or something sensible.
-        size: {
-            width: 400,
-            height: 300
+        yAxis: {
+            currentMin: 0,
+            currentMax: 10,
+            title: { text: 'Skill Level' }
         }
+
     };
 }]);
