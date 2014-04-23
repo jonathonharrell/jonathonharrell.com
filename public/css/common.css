@@ -7,6 +7,7 @@ a.undecorated-link:hover {
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
+
 .navbar-brand {
   line-height:16px;
   padding-top:10px;
@@ -17,4 +18,53 @@ a.undecorated-link:hover {
   display:block;
   font-size:10px;
   text-align: center
+}
+
+.spinner {
+    text-align: center;
+    margin: auto;
+}
+
+.blog-post.ng-enter, .blog-post.ng-move,
+.spinner.ng-enter, .spinner.ng-move {
+  -webkit-transition:0.5s linear all;
+  -moz-transition:0.5s linear all;
+  -o-transition:0.5s linear all;
+  transition:0.5s linear all;
+  opacity:0;
+}
+ 
+/* Animations */
+.blog-post.ng-enter.ng-enter-active,
+.blog-post.ng-move.ng-move-active, 
+.spinner.ng-enter-active,
+.spinner.ng-move-active {
+  opacity:1;
+}
+
+.blog-post.ng-leave, .spinner.ng-leave {
+  -webkit-animation:0.5s my_animation;
+  -moz-animation:0.5s my_animation;
+  -o-animation:0.5s my_animation;
+  animation:0.5s my_animation;
+}
+ 
+@keyframes my_animation {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+
+@-webkit-keyframes my_animation {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+ 
+@-moz-keyframes my_animation {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+ 
+@-o-keyframes my_animation {
+  from { opacity:1; }
+  to { opacity:0; }
 }
