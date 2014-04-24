@@ -23,23 +23,31 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
             data: [{
                 name: 'PHP',
                 color: '#8892BF',
-                y: 10
+                y: 9.75
             }, {
-                name: 'Javascript',
+                name: 'JS',
                 color: '#b30406',
-                y: 9
+                y: 9.25
             }, {
-                name: 'Node.js',
+                name: 'Node',
                 color: '#80bd01',
-                y: 8
+                y: 8.5
             }, {
-                name: 'Ruby on Rails',
+                name: 'RoR',
                 color: '#981A21',
-                y: 5
+                y: 5.5
             }, {
-                name: 'Symfony 2',
+                name: 'Symfony',
                 color: '#059',
                 y: 8
+            }, {
+                name: 'Angular',
+                color: '#a6120d',
+                y: 6.5
+            }, {
+                name: 'Python',
+                color: '#ffd343',
+                y: 3.25
             }],
 
             showInLegend: false
