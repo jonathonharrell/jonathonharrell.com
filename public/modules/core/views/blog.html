@@ -7,11 +7,12 @@
         <div class="blog-post" ng-repeat="post in blogs | limitTo: 5">
             <h4><a href="{{post.url}}">{{post.title}}</a> <small>{{post.time_ago}}</small></h4>
             <p>{{post.summary | htmlToPlainText | limitTo: 150 }}...</p>
-            <br />
         </div>
         <hr />
         <div class="blog-link">
             <p>Read more on <a href="{{url}}">my blog</a>.</p>
         </div>
+        <br />
+        <div data-ng-include="'/modules/core/views/twitter.html'"></div>
     </div>
 </section>

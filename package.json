@@ -31,7 +31,8 @@
     "grunt-cli": "~0.1.13",
     "request": "~2.34.0",
     "async": "~0.7.0",
-    "rssparser": "0.0.7"
+    "rssparser": "0.0.7",
+    "node-twitter-api": "~1.2.0"
   },
   "devDependencies": {
     "supertest": "~0.10.0",
