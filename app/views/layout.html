@@ -38,7 +38,8 @@
 
 	<!-- Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Signika:400,700' rel='stylesheet' type='text/css'>
-	
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> <!-- Font Awesome -->
+
 	<!-- Application CSS -->
 	<link rel="stylesheet" href="/css/common.css">
 
@@ -54,11 +55,12 @@
 
 <body class="ng-cloak">
 	<header data-ng-include="'/modules/core/views/header.html'" class="navbar navbar-fixed-top navbar-inverse"></header>
-	<section class="content">
-		<section class="container">
+	<section class="content" id="wrap">
+		<section id="main" class="container clear-top">
 			{% block content %}{% endblock %}
 		</section>
 	</section>
+	<footer data-ng-include="'/modules/core/views/footer.html'" class="footer"></footer>
 
 	<!--Embedding The User Object-->
 	<script type="text/javascript">
