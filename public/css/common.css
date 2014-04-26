@@ -29,6 +29,11 @@ a {
 }
 
 .spacer {
+  min-height: 150px;
+  content: " ";
+}
+
+.small-spacer {
   min-height: 50px;
   content: " ";
 }
@@ -51,12 +56,16 @@ a {
 }
 
 .sc-opener {
+  background: url('/img/diamond_upholstery.png') #fff;
+}
+
+.triangular {
   background: url('/img/triangular.png') #fff;
 }
 
 .sc-opener .container {
   background: rgb(255, 255, 255) transparent;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.55);
 }
 
 .footer {
@@ -104,6 +113,10 @@ body {
 .spinner {
     text-align: center;
     margin: auto;
+}
+
+.sc-image .img-responsive {
+  margin: 0 auto;
 }
 
 .blog-post.ng-enter, .blog-post.ng-move,
