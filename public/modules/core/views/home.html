@@ -1,34 +1,45 @@
 <section data-ng-controller="HomeController">
     <div class="sc-opener">
         <div class="container">
-            <div class="left-showcase-image col-sm-3 hidden-xs">
-                <i class="fa fa-globe earth-blue" ng-class="{'fa-spin': hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false"></i>
+            <div class="row">
+
+                <div class="spacer col-sm-12 hidden-xs"></div>
+                
+                <div class="left-showcase-image col-sm-3 hidden-xs text-center">
+                    <i class="fa fa-globe earth-blue" ng-class="{'fa-spin': hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false"></i>
+                </div>
+                <div class="col-sm-7">
+                    <h1>I love creating apps for the web.</h1>
+                    <p class="large-text">Whether they're enterprise-level, scalable applications managing large datasets, or indie HTML5 games; Any project that wants to push the envelope gets me excited.</p>
+                    <br />
+                    <p class="large-text"><i class="fa fa-quote-left fa-2x pull-left"></i><em>This isn't just my career, it's my passion. I'm one of those lucky few who gets to do what he loves - I really enjoy what I do.</em></p>
+                </div>
+                <div class="col-sm-2"></div>
+
             </div>
-            <div class="col-sm-7">
-                <h1>I love creating apps for the web.</h1>
-                <p class="large-text">Whether they're enterprise-level, scalable applications managing large datasets, or indie HTML5 games; Any project that wants to push the envelope gets me excited.</p>
-                <br />
-                <p class="large-text"><i class="fa fa-quote-left fa-2x pull-left fa-border"></i><em>This isn't just my career, it's my passion. I'm one of those lucky few who gets to do what he loves - and I truly love what I do.</em></p>
-                <br />
-                <br />
-                <br />
-            </div>
-            <div class="col-sm-2"></div>
-            <div class="col-sm-4 text-center">
-                <h3><i class="fa fa-terminal"></i> Backend</h3>
-                <p>PHP (Symfony, Zend, Laravel), Node (Express, Sails), Ruby on Rails, and Python, each primarily on Linux stacks (Ubuntu) running Nginx or Apache 2.</p>
-            </div>
-            <div class="col-sm-4 text-center">
-                <h3><i class="fa fa-laptop"></i> Frontend</h3>
-                <p>HTML5, jQuery, CSS3, Angular, Backbone, and a host of other libraries. I've helped design responsive layouts, and dabbled in font and logo design.</p>
-            </div>
-            <div class="col-sm-4 text-center">
-                <h3><i class="fa fa-folder-open-o"></i> Data Layer</h3>
-                <p>Mongo, MySQL, PostgreSQL. And I've dabbled in others. Although I'm most familiar with MySQL, Mongo is quickly becoming my go-to database.</p>
+
+            <div class="row">
+
+                <div class="spacer col-sm-12 hidden-xs"></div>
+
+                <div class="col-sm-4 text-center">
+                    <h3><i class="fa fa-terminal"></i> Backend</h3>
+                    <p>PHP (Symfony, Zend, Laravel), Node (Express, Sails), Ruby on Rails, and Python, each primarily on Linux stacks (Ubuntu) running Nginx or Apache.</p>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <h3><i class="fa fa-laptop"></i> Frontend</h3>
+                    <p>HTML5, jQuery, CSS3, Angular, Backbone, and a host of other libraries. I've helped design responsive layouts, and dabbled in font and logo design.</p>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <h3><i class="fa fa-folder-open-o"></i> Data Layer</h3>
+                    <p>Mongo, MySQL, PostgreSQL. And I've dabbled in others. Although I'm most familiar with MySQL, Mongo is quickly becoming my go-to database.</p>
+                </div>
+
+                <div class="spacer col-sm-12 hidden-xs"></div>
+
             </div>
         </div>
     </div>
-    <br />
     <div class="container">
         <div class="col-sm-8">
             <highchart id="skills-chart" config="chartConfig"></highchart>

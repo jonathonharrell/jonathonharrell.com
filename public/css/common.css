@@ -16,8 +16,21 @@ html, body {
   height: 100%;
 }
 
+a {
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
 #wrap {
   min-height: 100%;
+}
+
+.spacer {
+  min-height: 50px;
+  content: " ";
 }
 
 #main {
@@ -39,13 +52,10 @@ html, body {
 
 .sc-opener {
   background: url('/img/triangular.png') #fff;
-  border-bottom: 1px solid #aaa;
 }
 
 .sc-opener .container {
-  /* default fallback */
   background: rgb(255, 255, 255) transparent;
-  /* nice browsers */
   background: rgba(255, 255, 255, 0.6);
 }
 
