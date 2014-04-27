@@ -29,13 +29,36 @@ a {
 }
 
 .spacer {
-  min-height: 150px;
+  min-height: 120px;
   content: " ";
 }
 
 .small-spacer {
   min-height: 50px;
   content: " ";
+}
+
+.sc-about {
+  min-height: 785px;
+  background: url('/img/mebg.png') #fff;
+  color: #fefefe;
+}
+
+.sc-about h1, .sc-about h2, .sc-about h3, .sc-about h4, .sc-about h5 {
+  color: #fff;
+}
+
+.btn-margin button {
+  margin-right: 30px;
+}
+
+.bigger-ul {
+  font-size: 18px;
+}
+
+.bigger-ul li {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 #main {
