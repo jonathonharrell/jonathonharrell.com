@@ -1,18 +1,20 @@
 <section data-ng-controller="TwitterController">
-    <!-- Show Recent Twitter posts, follow me link --> 
-    <h2>Recent Tweets</h2>
-    <hr />
-    <div class="spinner" ng-show="loading"><img src="/img/loading.gif" title="loading..." /></div>
+    <h1><i class="fa fa-twitter" style="color: #55acee"></i> I'm on Twitter</h1>
+    <div class="small-spacer col-sm-12 hidden-xs"></div>
+    <div class="hidden-sm hidden-md hidden-lg"><hr /></div>
+    <div class=" text-center" ng-show="loading"><img src="/img/loading.gif" title="loading..." /></div>
     <div class="blog-post" ng-repeat="tweet in tweets | limitTo: 5">
         <p>
-            {{tweet.text}}
+            <span data-ng-bind-html="tweet.text | parseUrl"></span>
             <br />
             <a href="https://twitter.com/OverlySunny/status/{{tweet.id_str}}" target="_new">permalink</a>
-            <span class="text-muted">{{tweet.created_at | prettyDate}}</span>
+            <span class="text-muted">{{tweet.created_at | prettyDate }}</span>
         </p>
     </div>
-    <hr />
+
     <div class="blog-link">
+        <br /> <br />
         <p><iframe allowtransparency="true" frameborder="0" scrolling="no" src="//platform.twitter.com/widgets/follow_button.html?screen_name=overlysunny" style="width:300px; height:20px;"></iframe></p>
+        <br /> <br />
     </div>
 </section>

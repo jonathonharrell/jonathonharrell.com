@@ -2,31 +2,35 @@
     <!-- Show Blog Posts, Link to Blog -->
     <div class="sc-blog">
         <div class="container">
-            <div class="row" id="blog">
+            <div class="row" id="contact">
 
                 <div class="spacer col-sm-12 hidden-xs"></div>
                 <div class="small-spacer col-sm-12 hidden-sm hidden-md hidden-lg"></div>
 
-                <div class="col-sm-12">
-                    <h1><i class="fa fa-comment-o"></i> I blog on occasion</h1>
-                </div>
-                <div class="small-spacer col-sm-12"></div>
-
-                <div class="col-sm-12 text-center" ng-show="loading"><img src="/img/loading.gif" title="loading..." /></div>
-                <div class="col-sm-4" class="blog-post" ng-repeat="post in blogs | limitTo: 5">
-                    <h4><a href="{{post.url}}">{{post.title}}</a> <small>{{post.time_ago}}</small></h4>
-                    <p>{{post.summary | htmlToPlainText | limitTo: 200 }}...</p>
-                    <br />
-                </div>
-
                 <div class="col-sm-4">
+                    <h1><i class="fa fa-comment-o"></i> I blog on occasion</h1>
+                    <div class="small-spacer col-sm-12 hidden-xs"></div>
+                    <div class="hidden-sm hidden-md hidden-lg"><hr /></div>
+                    <div class="text-center" ng-show="loading"><img src="/img/loading.gif" title="loading..." /></div>
+                    <div class="blog-post" ng-repeat="post in blogs | limitTo: 3">
+                        <h4><a href="{{post.url}}">{{post.title}}</a> <small>{{post.time_ago}}</small></h4>
+                        <p>{{post.summary | htmlToPlainText | limitTo: 150 }}...</p>
+                        <hr />
+                    </div>
+
                     <div class="blog-link">
-                        <br /> <br />
-                        <p style="margin: auto;" class="text-center">Read more on at</p>
-                        <p style="margin: auto;" class="text-center"><i class="fa fa-comments-o fa-lg"></i>&nbsp; <a href="{{url}}">blog.jonathonharrell.com</a></p>
-                        <br /> <br />
+                        <p>Read more at</p>
+                        <p><i class="fa fa-comments-o fa-lg"></i>&nbsp; <a href="{{url}}">blog.jonathonharrell.com</a></p>
                     </div>
                 </div>
+
+                <div class="small-spacer col-sm-12 hidden-sm hidden-md hidden-lg"></div>
+
+                <div class="col-sm-4"><div data-ng-include="'/modules/core/views/twitter.html'"></div></div>
+
+                <div class="small-spacer col-sm-12 hidden-sm hidden-md hidden-lg"></div>
+
+                <div class="col-sm-4"><div data-ng-include="'/modules/core/views/contact.html'"></div></div>
 
                 <div class="spacer col-sm-12 hidden-xs"></div>
                 <div class="small-spacer col-sm-12 hidden-sm hidden-md hidden-lg"></div>
