@@ -1,4 +1,26 @@
 <section data-ng-controller="ContactController">
-    <h1><i class="fa fa-heart" style="color: red"></i> Get in touch</h1>
+    <h1><i class="fa fa-heart" style="color: red"></i> Other Networks</h1>
+    <div class="small-spacer col-sm-12 hidden-xs"></div>
+    <div class="hidden-sm hidden-md hidden-lg"><hr /></div>
     
+    <div style="font-size: 16px">
+        <p>Here are a few other ways we can get in touch: </p>
+        <p><i class="fa fa-envelope-o"></i>&nbsp; Email: <a href="mailto:jonathonharrell@yahoo.com">jonathonharrell@yahoo.com</a></p>
+        <p><i class="fa fa-skype"></i>&nbsp; Skype: jonathon.harrell</p>
+        <hr />
+        <p>
+            <div id="SkypeButton_Call_1" class="btn btn-lg btn-info">
+              <script type="text/javascript">
+                Skype.ui({
+                  "name": "chat",
+                  "element": "SkypeButton_Call_1",
+                  "participants": ["jonathon.harrell"],
+                  "imageSize": 24,
+                  "imageColor": "white"
+                });
+              </script>
+            </div>
+        </p>
+        <p><a href="mailto:jonathonharrell@yahoo.com" class="btn btn-lg btn-default"><i class="fa fa-envelope"></i>&nbsp; Email Me</a></p>
+    </div>
 </section>

@@ -16,7 +16,7 @@ html, body {
   height: 100%;
 }
 
-a {
+.navbar a {
   -o-transition:.5s;
   -ms-transition:.5s;
   -moz-transition:.5s;
@@ -179,4 +179,14 @@ body {
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH";
+}
+
+p#SkypeButton_Call_1_paraElement a img, p#SkypeButton_Call_1_paraElement a img, p#SkypeButton_Call_1_paraElement a, p#SkypeButton_Call_1_paraElement {
+    margin:0 !important;
+    vertical-align:0 !important;
+    padding:0 !important;
+    line-height:0 !important;
+}
+div#SkypeButton_Call_jonathon.harrell_1, div#SkypeButton_Call_jonathon.harrell_1 {
+    display:inline-block;
 }
