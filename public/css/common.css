@@ -52,7 +52,7 @@ html, body {
   margin-right: 5px;
 }
 
-.bigger-ul {
+.bigger-ul, .bigger-p {
   font-size: 18px;
 }
 
