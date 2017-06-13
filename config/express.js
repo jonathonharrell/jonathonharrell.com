@@ -14,11 +14,6 @@ module.exports = function() {
 	// Initialize express app
 	var app = express();
 
-	// Initialize models
-	utilities.walk('./app/models').forEach(function(modelPath) {
-		require(path.resolve(modelPath));
-	});
-
 	// Setting the environment locals
 	app.locals({
 		title: config.app.title,
