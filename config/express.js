@@ -4,15 +4,13 @@
  * Module dependencies.
  */
 var express = require('express'),
-	passport = require('passport'),
-	mongoStore = require('connect-mongo')(express),
 	flash = require('connect-flash'),
 	config = require('./config'),
 	consolidate = require('consolidate'),
 	path = require('path'),
 	utilities = require('./utilities');
 
-module.exports = function(db) {
+module.exports = function() {
 	// Initialize express app
 	var app = express();
 
@@ -26,7 +24,6 @@ module.exports = function(db) {
 		title: config.app.title,
 		description: config.app.description,
 		keywords: config.app.keywords,
-		facebookAppId: config.facebook.clientID,
 		modulesJSFiles: utilities.walk('./public/modules', /(.*)\.(js)/, /(.*)\.(spec.js)/, './public'),
 		modulesCSSFiles: utilities.walk('./public/modules', /(.*)\.(css)/, null, './public')
 	});
@@ -57,7 +54,7 @@ module.exports = function(db) {
 
 	// Application Configuration for development environment
 	app.configure('development', function() {
-		// Enable logger 
+		// Enable logger
 		app.use(express.logger('dev'));
 
 		// Disable views cache
@@ -81,19 +78,6 @@ module.exports = function(db) {
 
 	// cookieParser should be above session
 	app.use(express.cookieParser());
-
-	// express/mongo session storage
-	app.use(express.session({
-		secret: config.sessionSecret,
-		store: new mongoStore({
-			db: db.connection.db,
-			collection: config.sessionCollection
-		})
-	}));
-
-	// use passport session
-	app.use(passport.initialize());
-	app.use(passport.session());
 
 	// connect flash for flash messages
 	app.use(flash());
